@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>xml</title>
+
+</head>
+<body>
+    <script>
+      function getData() {
+        const xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function () {
+          const elem = document.getElementById("output");
+          const docelem = xmlhttp.responseXML.documentElement;
+
+          const nodesItem = docelem.getElementsByTagName("item");
+
+          const nodesName = docelem.getElementsByTagName("name");
+          const nodesHeigt = docelem.getElementsByTagName("height");
+          const nodesWeight = docelem.getElementsByTagName("weight");
+
+          elem.innerHTML = "";
+
+          if (xmlhttp.readyState === 4) {
+            if (xmlhttp.status === 200) {
+
+              elem.innerHTML += "----- getElementsByTagName -----<br/>";
+              for (i = 0; i < nodesItem.length; i++) {
+                elem.innerHTML += nodesName[i].tagName + ":" + nodesName[i].textContent + "<br/>";
+
+
+                elem.innerHTML += nodesHeigt[i].tagName + ":" + nodesHeigt[i].textContent + "<br/>";
+
+                elem.innerHTML += nodesWeight[i].tagName + ":" + nodesWeight[i].textContent + "<br/>";
+              elem.innerHTML += "----------<br/>";
+              }
+            } else {
+              alert("status = " + xmlhttp.status);
+            }
+          }
+        }
+        xmlhttp.open("GET", "sample.xml");
+        xmlhttp.send();
+      }
+    </script>
+
+  <input id="Button_Get" type="button" value="取得" onclick="getData();" />
+  <div>受信情報</div>
+  <div id="output"></div>
+</body>
+</html>
+
+
