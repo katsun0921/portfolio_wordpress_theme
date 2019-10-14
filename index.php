@@ -78,7 +78,57 @@
             <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
           </div>
         </li>
+        <li class="p-resume__skillLabel">JavaScripts : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">SASS : 5年<span class="p-resume__skillLabelSub">Business</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">jQuery : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">Photoshop : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">Illustrator : 4年<span class="p-resume__skillLabelSub">Student</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">4年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">Adobe XD : 3年<span class="p-resume__skillLabelSub">Private</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">3年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">After Effects : 4年<span class="p-resume__skillLabelSub">Student</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">4年</span></div>
+          </div>
+        </li>
+        <li class="p-resume__skillLabel">3ds Max : 4年<span class="p-resume__skillLabelSub">Private</span>
+          <div class="p-resume__skill">
+            <!-- あとでJS機能にする-->
+            <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">4年</span></div>
+          </div>
+        </li>
         <li class="p-resume__skillLabel">git<span class="p-resume__skillLabelSub">コード管理</span></li>
+        <li class="p-resume__skillLabel">Backlog<span class="p-resume__skillLabelSub">プロジェクト管理</span></li>
+        <li class="p-resume__skillLabel">Microsoft Office365(Microsoft Excel、Teams、SharePoint、Flow、OneNote)</li>
       </ul>
     </div>
     <div class="l-content__block">
@@ -87,17 +137,27 @@
         <div class="p-resume__timelineBlock">
           <div class="p-resume__timelineExp">
             <div class="p-resume__timelineHgroup">
-              <h4 class="p-resume__timelineHeading">UX Designer</h4><span class="p-resume__timelineHeadingDate">Mar 2019</span>
+              <h4 class="p-resume__timelineHeading">フロントエンジニア 株式会社ミツエーリンクス</h4><span class="p-resume__timelineHeadingDate">2013年10月 - 2019年3月</span>
             </div>
             <dl class="p-resume__timelineContent">
-              <dt class="p-resume__timelineContentHeading">会社名・学校名</dt>
+              <dt class="p-resume__timelineContentHeading">フロントエンジニア</dt>
               <dd>
                 <ul class="c-list">
-                  <li class="c-list--disc">作業の内容</li>
-                  <li class="c-list--disc">作業の内容</li>
-                  <li class="c-list--disc">作業の内容</li>
-                  <li class="c-list--disc">作業の内容</li>
-                  <li class="c-list--disc">作業の内容</li>
+                  <li class="c-list--disc">デザインからリニューアルサイトを作成</li>
+                  <li class="c-list--disc">デザイナーが作成したPSDファイルをもとにページレイアウトを作成<br>（PSDファイルから画像の切り出しを含めて、テンプレートページ作成）</li>
+                  <li class="c-list--disc">コンポーネント一覧からWebページの作成</li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="p-resume__timelineContent">
+              <dt class="p-resume__timelineContentHeading">品質管理部門</dt>
+              <dd>
+                <ul class="c-list">
+                  <li class="c-list--disc">5名ほどでさまざまなプロジェクトの Web ページをチェック</li>
+                  <li class="c-list--disc">テキストやリンクなどが現行どおりかのチェック</li>
+                  <li class="c-list--disc">指定のブラウザでの表示の崩れがないか</li>
+                  <li class="c-list--disc">JavaScriptが意図どおりに問題なく動作しているか</li>
+                  <li class="c-list--disc">Web Content Accessibility Guidelines(WCAG)に準拠しているか</li>
                 </ul>
               </dd>
             </dl>
@@ -106,20 +166,41 @@
       </div>
     </div>
     <div class="l-content__block">
-      <h3 class="c-heading__blockMain">Education</h3>
+      <h3 class="c-heading__blockMain">STUDENT</h3>
       <div class="p-resume__timeline education">
         <div class="p-resume__timelineBlock">
           <div class="p-resume__timelineExp">
             <div class="p-resume__timelineHgroup">
-              <h4 class="p-resume__timelineHeading">UX Designer</h4><span class="p-resume__timelineHeadingDate">Mar 2019</span>
+              <h4 class="p-resume__timelineHeading">ヒューマンアカデミー</h4><span class="p-resume__timelineHeadingDate">Apl 2011 - Mar 2013</span>
             </div>
-            <p>Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <dl class="p-resume__timelineContent">
+              <dt class="p-resume__timelineContentHeading">Webデザイナー</dt>
+              <dd>
+                <ul class="c-list">
+                  <li class="c-list--disc">html、css、JavaScriptsの基礎を学ぶ</li>
+                  <li class="c-list--disc">Photoshop、IllustratorでUI作成、バナー作成</li>
+                  <li class="c-list--disc">Wordpressを使用してのブログ作成</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="p-resume__timelineExp">
+            <div class="p-resume__timelineHgroup">
+              <h4 class="p-resume__timelineHeading">東京工芸大学芸術学部メディアアート表現学科</h4><span class="p-resume__timelineHeadingDate">Apl 2004 - Mar 2008</span>
+            </div>
+            <dl class="p-resume__timelineContent">
+              <dt class="p-resume__timelineContentHeading">3DCG選考</dt>
+              <dd>
+                <ul class="c-list">
+                  <li class="c-list--disc">3DCGソフトを使用してのアニメーションを作成</li>
+                  <li class="c-list--disc">学生時代のポートフォリオ<br>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
+                </ul>
+              </dd>
+            </dl>
+            <video class="c-video--100per" src="<?php echo get_template_directory_uri() ?>/video/portfolio_mp4.mp4" controls preload="auto" poster="<?php echo get_template_directory_uri() ?>/images/video_poster_image.png"></video>
           </div>
         </div>
       </div>
-    </div>
-    <div class="l-content__block">
-      <video class="c-video--100per" src="<?php echo get_template_directory_uri() ?>/video/portfolio_mp4.mp4" controls preload="auto" poster="/images/video_poster_image.png"></video>
     </div>
   </section>
   <section class="js-container l-container" id="work">
