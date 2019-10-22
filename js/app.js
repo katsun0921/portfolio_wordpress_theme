@@ -86,6 +86,77 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/ts/clickClose.ts":
+/*!******************************!*\
+  !*** ./src/ts/clickClose.ts ***!
+  \******************************/
+/*! exports provided: clickClose */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clickClose", function() { return clickClose; });
+var btnClose = document.getElementById('js-btnCloseContent');
+var topMenu = document.getElementById('js-topMenu');
+var topNames = Array.from(document.getElementsByClassName('js-topName'));
+var menu = document.getElementById('js-menu');
+var contentBlock = document.getElementById('js-content'); // あとでgetにする
+
+function removeClass(elem, className) {
+  if (elem !== null) {
+    elem.classList.remove(className);
+  }
+}
+
+function addClass(elem, className) {
+  if (elem !== null) {
+    elem.classList.add(className);
+  }
+}
+/**
+ * @param  {any} obj
+ * @returns void
+ * closeボタンをクリックしたときのイベント
+ */
+
+
+function clickClose(obj) {
+  var url = location.pathname;
+  var path = url.split('/');
+
+  if (btnClose !== null) {
+    btnClose.onclick = function () {
+      /**
+       * @param  {} path[1] === ''
+       * TOPページかを判定
+       * URLのパス名で配列にし、配列の長さが1のときはTOP
+       * TOP(/)であれば[""]
+       * 下層(/blog)であれば["blog"]となる
+       */
+      if (path[1] === '') {
+        removeClass(topMenu, 'is-none');
+
+        for (var _i = 0, topNames_1 = topNames; _i < topNames_1.length; _i++) {
+          var topName = topNames_1[_i];
+          var elem = topName;
+          elem.classList.remove('is-rotation');
+        }
+
+        addClass(menu, 'is-none');
+        removeClass(contentBlock, 'is-show');
+        Object.keys(obj).forEach(function (key) {
+          var elemRemove = document.getElementById(obj[key]);
+          removeClass(elemRemove, 'is-show');
+        });
+      } else {
+        window.location.href = '/';
+      }
+    };
+  }
+}
+
+/***/ }),
+
 /***/ "./src/ts/clickElement.ts":
 /*!********************************!*\
   !*** ./src/ts/clickElement.ts ***!
@@ -99,10 +170,10 @@ __webpack_require__.r(__webpack_exports__);
 var clickElement =
 /** @class */
 function () {
-  function clickElement(btn, getElement, addClass) {
+  function clickElement(btn, getElement, className) {
     this.btn = btn;
     this.getElement = getElement;
-    this.addClass = addClass;
+    this.className = className;
   }
 
   clickElement.prototype.showContent = function () {
@@ -111,19 +182,30 @@ function () {
     var btnContents = Array.from(document.getElementsByClassName(this.btn));
     var elemGetId = document.getElementById(this.getElement);
     var elemAddClasses = document.getElementsByClassName('js-container');
+    var url = location.pathname;
+    var path = url.split('/');
 
     for (var _i = 0, btnContents_1 = btnContents; _i < btnContents_1.length; _i++) {
       var btnContent = btnContents_1[_i];
       var elemContent = btnContent;
-      elemContent.addEventListener('click', function () {
-        Object.values(elemAddClasses).forEach(function (elem) {
-          elem.classList.add('is-none');
-          elem.classList.remove(_this.addClass);
-        });
+      /**
+       * @param  {} 'click'
+       * nav menuをクリックしたときにcontentを表示する
+       */
 
-        if (elemGetId !== null) {
-          elemGetId.classList.remove('is-none');
-          elemGetId.classList.add(_this.addClass);
+      elemContent.addEventListener('click', function () {
+        if (path[1] === '') {
+          Object.values(elemAddClasses).forEach(function (elem) {
+            elem.classList.add('is-none');
+            elem.classList.remove(_this.className);
+          });
+
+          if (elemGetId !== null) {
+            elemGetId.classList.remove('is-none');
+            elemGetId.classList.add(_this.className);
+          }
+        } else {
+          window.location.href = '/#' + _this.getElement;
         }
       }, false);
     }
@@ -140,7 +222,7 @@ function () {
       var elemContent = btnContent;
       elemContent.addEventListener('click', function () {
         if (elemGetId !== null) {
-          elemGetId.classList.add(_this.addClass);
+          elemGetId.classList.add(_this.className);
         }
       }, false);
     }
@@ -157,7 +239,7 @@ function () {
       var elemContent = btnContent;
       elemContent.addEventListener('click', function () {
         if (elemGetId !== null) {
-          elemGetId.classList.remove(_this.addClass);
+          elemGetId.classList.remove(_this.className);
         }
       }, false);
     }
@@ -176,7 +258,7 @@ function () {
         for (var _i = 0, rotations_1 = rotations; _i < rotations_1.length; _i++) {
           var rotation = rotations_1[_i];
           var elem = rotation;
-          elem.classList.add(_this.addClass);
+          elem.classList.add(_this.className);
         }
       }, false);
     }
@@ -237,11 +319,20 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ieError__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ieError */ "./src/ts/ieError.ts");
 /* harmony import */ var _clickElement__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./clickElement */ "./src/ts/clickElement.ts");
+/* harmony import */ var _clickClose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./clickClose */ "./src/ts/clickClose.ts");
+/* harmony import */ var _load__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./load */ "./src/ts/load.ts");
 
 
 
 
-Object(_ieError__WEBPACK_IMPORTED_MODULE_0__["isIE"])();
+
+
+{
+  /**
+   * ie ブラウザで開いたときにエラーを表示
+   */
+  Object(_ieError__WEBPACK_IMPORTED_MODULE_0__["isIE"])();
+}
 /*
  * btnにclickのする要素のid名
  * getIdに追加するクラス名
@@ -272,39 +363,64 @@ var content = {
   new _clickElement__WEBPACK_IMPORTED_MODULE_1__["clickElement"]('js-topBtn', 'js-topName', 'is-rotation').rotationTopName();
 }
 {
-  var btnClose = document.getElementById('js-btnCloseContent');
-  var topMenu_1 = document.getElementById('js-topMenu');
-  var topNames_1 = Array.from(document.getElementsByClassName('js-topName'));
-  var menu_1 = document.getElementById('js-menu');
-  var contentBlock_1 = document.getElementById('js-content');
+  /**
+   * @param  {} content
+   * nav メニューの閉じるボタンをクリックイベント
+   */
+  Object(_clickClose__WEBPACK_IMPORTED_MODULE_2__["clickClose"])(content);
+}
+{
+  Object(_load__WEBPACK_IMPORTED_MODULE_3__["loadShowContent"])();
+}
 
-  if (btnClose !== null) {
-    btnClose.onclick = function () {
-      if (topMenu_1 !== null) {
-        topMenu_1.classList.remove('is-none');
-      }
+/***/ }),
 
-      for (var _i = 0, topNames_2 = topNames_1; _i < topNames_2.length; _i++) {
-        var topName = topNames_2[_i];
-        var elem = topName;
-        elem.classList.remove('is-rotation');
-      }
+/***/ "./src/ts/load.ts":
+/*!************************!*\
+  !*** ./src/ts/load.ts ***!
+  \************************/
+/*! exports provided: loadShowContent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-      if (menu_1 !== null) {
-        menu_1.classList.add('is-none');
-      }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadShowContent", function() { return loadShowContent; });
+var hash = location.hash;
+var getId = document.getElementById(hash.replace('#', ''));
+var topMenu = document.getElementById('js-topMenu');
+var content = document.getElementById('js-content');
+var menuId = document.getElementById('js-menu');
+var rotations = Array.from(document.getElementsByClassName('js-topName'));
+function loadShowContent() {
+  var elemAddClasses = document.getElementsByClassName('js-container');
 
-      if (contentBlock_1 !== null) {
-        contentBlock_1.classList.remove('is-show');
-      }
-
-      Object.keys(content).forEach(function (key) {
-        var elemRemove = document.getElementById(content[key]['content']);
-
-        if (elemRemove !== null) {
-          elemRemove.classList.remove('is-show');
-        }
+  if (hash) {
+    window.onload = function () {
+      /**
+       * @param  {} elemAddClasses
+       * @param  {} .forEach((elem
+       * showContent()
+       */
+      Object.values(elemAddClasses).forEach(function (elem) {
+        elem.classList.add('is-none');
+        elem.classList.remove('is-show');
+        getId.classList.remove('is-none');
+        getId.classList.add('is-show');
       });
+      topMenu.classList.add('is-none');
+      content.classList.add('is-show');
+      /**
+       * @param  {} 'is-none'
+       * showMenu()
+       */
+
+      menuId.classList.remove('is-none');
+
+      for (var _i = 0, rotations_1 = rotations; _i < rotations_1.length; _i++) {
+        var rotation = rotations_1[_i];
+        var elem = rotation;
+        elem.classList.add('is-rotation');
+      }
     };
   }
 }

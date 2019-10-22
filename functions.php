@@ -1,6 +1,15 @@
 <?php
 
 
+function replace($i) {
+  if(is_front_page()) {
+    $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'];
+return str_replace($url, $url."/blog", get_pagenum_link($i));
+} else {
+  return get_pagenum_link($i);
+  }
+}
+
 /**
 * ページネーション出力関数
 * $paged : 現在のページ
@@ -33,11 +42,11 @@ function pagination( $pages, $paged, $range = 2, $show_only = false ) {
     echo '<div class="c-pagination"><ul class="c-pagination__linkList">';
     if ( $paged > $range + 1 ) {
       // 「最初へ」 の表示
-      echo '<li><a class="c-pagination__link" href="', get_pagenum_link(1) ,'">', $text_first ,'</a></li>';
+      echo '<li><a class="c-pagination__link" href="', replace(1) ,'">', $text_first ,'</a></li>';
       }
     if ( $paged > 1 ) {
       // 「前へ」 の表示
-      echo '<a class="c-pagination__link" href="', get_pagenum_link( $paged - 1 ) ,'">', $text_before ,'</a>';
+      echo '<a class="c-pagination__link" href="', replace( $paged - 1 ) ,'">', $text_before ,'</a>';
     }
     for ( $i = 1; $i <= $pages; $i++ ) {
 
@@ -46,18 +55,18 @@ function pagination( $pages, $paged, $range = 2, $show_only = false ) {
         if ( $paged === $i ) {
             echo '<li><span class="c-pagination__link is-active">', $i ,'</span></li>';
         } else {
-            echo '<li><a class="c-pagination__link" href="', get_pagenum_link( $i ) ,'">', $i ,'</a></li>';
+            echo '<li><a class="c-pagination__link" href="', replace( $i ) ,'">', $i ,'</a></li>';
         }
       }
 
     }
     if ( $paged < $pages ) {
         // 「次へ」 の表示
-        echo '<li><a class="c-pagination__link" href="', get_pagenum_link( $paged + 1 ) ,'">', $text_next ,'</a></li>';
+        echo '<li><a class="c-pagination__link" href="', replace( $paged + 1 ) ,'">', $text_next ,'</a></li>';
     }
     if ( $paged + $range < $pages ) {
         // 「最後へ」 の表示
-        echo '<li><a class="c-pagination__link" href="', get_pagenum_link( $pages ) ,'">', $text_last ,'</a></li>';
+        echo '<li><a class="c-pagination__link" href="', replace($pages) ,'">', $text_last ,'</a></li>';
     }
     echo '</ul></div>';
   }
