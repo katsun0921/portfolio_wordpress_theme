@@ -1,30 +1,6 @@
-<div class="l-container__background--overlay"></div>
-<div class="l-container">
-  <section class="js-topName p-top__name is-rotation">
-    <!-- クリック時に.is-reverseを付与-->
-    <div class="js-topName p-top__nameContainer is-rotation">
-      <h1 class="p-top__headingMain">Katsumasa<br>Sato<span class="p-top__headingMain--sub">WEB DEVELOPER</span></h1>
-      <!-- スキルシートへリンクを貼る--><a class="p-top__nameSkillLink" href="#">SKILL SHEET</a>
-    </div>
-  </section>
-</div>
+<?php get_template_part( '_top-open' , false) ?>
 <div class="l-content__blocks is-show" id="js-content">
-  <nav class="l-menu__container" id="js-menu"><span class="l-menu__status">Portfolio Katsumasa Sato</span>
-    <ul class="l-menuInline">
-      <li>
-        <button class="js-btnResume l-menuInline__list">Resume</button>
-      </li>
-      <li>
-        <button class="js-btnWork l-menuInline__list">Work</button>
-      </li>
-      <li>
-        <button class="js-btnBlog l-menuInline__list">Blog</button>
-      </li>
-      <li>
-        <button class="l-menuInline__list" id="js-btnCloseContent"><span class="fas fa-times"></span></button>
-      </li>
-    </ul>
-  </nav>
+<?php get_template_part( '_nav-open' , false) ?>
   <section class="l-container is-show" id="resume">
       <div class="l-content__block">
         <article id="blog-<?php the_ID(); ?>" class="p-blog__post">
@@ -43,6 +19,7 @@
           <div class="p-blog__postBody">
             <?php the_content(); ?>
           </div>
+          <a href="/#blog" class="c-btn c-btn--block u-width--25">BLOG一覧に戻る</a>
         </article>
         <div class="c-btn__social">
           <dl class="c-btn__socialBtn">
@@ -56,6 +33,31 @@
           </dl>
         </div>
       </div>
+
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$arg   = array(
+	'posts_per_page' => 2, 	// 表示する件数
+	'orderby'        => 'modified', // 更新日でソート
+	'order'          => 'DESC', 	// DESCで最新から表示、ASCで最古から表示
+	'category_name'  => 'blog', 	// 特定のカテゴリースラッグを指定
+	'paged'          => $paged, 	// ページ設定
+);
+$query = new WP_Query($arg);
+// max_num_pagesを取得
+$MaxNumPages = $query->max_num_pages;
+if ($query->have_posts()) :
+    while ($query->have_posts()) {
+        $query->the_post();
+?>
+
+	<?php the_content(); ?>
+<?php
+    }
+endif;
+wp_reset_postdata();
+?>
+
     </section>
   </div>
 </div>
