@@ -21,15 +21,7 @@
     <article id="blog-<?php the_ID(); ?>" class="p-blog__post">
       <h3 class="p-blog__postTitle"><?php the_title(); ?></h3>
       <p class="p-blog__postInfo">
-        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time><span>
-          <?php
-          $tags = get_the_tags();
-          if($tags) {
-            foreach ( $tags as $tag ) {
-            echo $tag->name;
-            }
-          }
-          ?></span>
+        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time><span><?php echo tag() ?></span>
       </p>
       <div class="p-blog__postBody">
         <?php the_excerpt(); ?>
