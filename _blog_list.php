@@ -13,7 +13,7 @@
       $query = new WP_Query($blog);
       // max_num_pagesを取得
       $MaxNumPages = $query->max_num_pages;
-      $categoryName = $query->category_name;
+      $categoryName = $blog['category_name'];
       if ($query->have_posts()) :
         while ($query->have_posts()) :
           $query->the_post();
@@ -36,7 +36,7 @@
     <?php
     /* ページャーの表示 */
     if (function_exists('pagination')) :
-      pagination($MaxNumPages, get_query_var('paged'));
+      pagination($MaxNumPages, get_query_var('paged'), $categoryName);
     endif;
     ?>
 

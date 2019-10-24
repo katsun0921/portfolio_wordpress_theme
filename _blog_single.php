@@ -37,23 +37,23 @@
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $arg   = array(
-	'posts_per_page' => 2, 	// 表示する件数
-	'orderby'        => 'modified', // 更新日でソート
-	'order'          => 'DESC', 	// DESCで最新から表示、ASCで最古から表示
-	'category_name'  => 'blog', 	// 特定のカテゴリースラッグを指定
-	'paged'          => $paged, 	// ページ設定
+  'posts_per_page' => 2,                  // 表示する件数
+  'orderby'        => 'modified',         // 更新日でソート
+  'order'          => 'DESC',             // DESCで最新から表示、ASCで最古から表示
+  'category_name'  => 'blog',             // 特定のカテゴリースラッグを指定
+  'paged'          => $paged,             // ページ設定
+  'post__not_in'   => array(get_the_ID()) // 表示しているページを除外
 );
 $query = new WP_Query($arg);
 // max_num_pagesを取得
 $MaxNumPages = $query->max_num_pages;
 if ($query->have_posts()) :
-    while ($query->have_posts()) {
-        $query->the_post();
+  while ($query->have_posts()) {
+  $query->the_post();
 ?>
-
-	<?php the_content(); ?>
+  <?php the_content(); ?>
 <?php
-    }
+  }
 endif;
 wp_reset_postdata();
 ?>

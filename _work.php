@@ -15,7 +15,7 @@
     <?php
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $work = array(
-        'posts_per_page' => 6, 	// 表示する件数
+        'posts_per_page' => 1, 	// 表示する件数
         'orderby'        => 'modified', // 更新日でソート
         'order'          => 'DESC', 	// DESCで最新から表示、ASCで最古から表示
         'category_name'  => 'work', 	// 特定のカテゴリースラッグを指定
@@ -40,6 +40,12 @@
     endif;
       wp_reset_postdata();
     ?>
+    <?php
+/* 以下、ページャーの表示 */
+if (function_exists('pagination')) :
+    pagination($MaxNumPages, get_query_var('paged'), 'work');
+endif;
+?>
     </section>
   </div>
 </section>
