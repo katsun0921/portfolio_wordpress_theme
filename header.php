@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php bloginfo('name') ?> Katsumasa Sato</title>
     <meta name="description"  content="<?php bloginfo('description'); ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/styles.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/style.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP|Taviraj&amp;display=swap"><script src="https://kit.fontawesome.com/48f542ac57.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/ie.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/app.js" defer></script>
