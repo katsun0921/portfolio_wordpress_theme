@@ -4,7 +4,7 @@
   <section class="l-container is-show" id="resume">
       <div class="l-content__block">
         <article id="blog-<?php the_ID(); ?>" class="p-blog__post">
-          <h2 class="p-blog__postTitle"><?php the_title() ?></h2>
+          <h1 class="p-blog__postTitle"><?php the_title() ?></h1>
           <p class="p-blog__postInfo">
           <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time><span>
             <?php

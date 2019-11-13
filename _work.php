@@ -1,4 +1,4 @@
-<section class="js-container l-container" id="work">
+<article class="js-container l-container" id="work">
   <div class="l-content__block">
     <h2 class="c-heading__blockMain">Work</h2>
     <dl class="p-work__filters">
@@ -48,4 +48,4 @@ endif;
 ?>
     </section>
   </div>
-</section>
+</article>

@@ -1,6 +1,7 @@
-<section class="js-container l-container" id="blog">
+<article class="js-container l-container" id="blog">
   <div class="l-content__block">
-    <h2 class="c-heading__blockMain">Blog</h2>
+    <?php $tag = ($path) ? 'h1' : 'h2'; ?>
+    <<?php echo $tag ?> class="c-heading__blockMain">Blog</<?php echo $tag ?>>
     <?php
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $blog = array(
@@ -41,4 +42,4 @@
     ?>
 
   </div>
-</section>
+</article>

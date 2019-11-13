@@ -1,4 +1,4 @@
-<section class="js-container l-container" id="resume">
+<article class="js-container l-container" id="resume">
   <div class="l-content__block">
     <h2 class="c-heading__blockMain">Profile</h2>
     <p>
@@ -157,4 +157,4 @@
       </div>
     </div>
   </div>
-</section>
+</article>
