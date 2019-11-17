@@ -135,11 +135,16 @@
             <h4 class="p-resume__timelineHeading">東京工芸大学芸術学部メディアアート表現学科</h4><span class="p-resume__timelineHeadingDate">Apl 2004 - Mar 2008</span>
           </div>
           <dl class="p-resume__timelineContent">
-            <dt class="p-resume__timelineContentHeading">3DCG選考</dt>
+            <dt class="p-resume__timelineContentHeading">3DCG専攻</dt>
             <dd>
               <ul class="c-list">
                 <li class="c-list--disc">3DCGソフトを使用してのアニメーションを作成</li>
-                <li class="c-list--disc">学生時代のポートフォリオ・<a href="https://drive.google.com/open?id=1uCJflFvs9ip3p7RfLJOECh96HRFi6nZ2" target="_blank" rel="noopener">PDFファイル</a><br>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
+                <li class="c-list--disc">学生時代のポートフォリオ
+                  <ul>
+                    <li><a href="https://drive.google.com/open?id=1uCJflFvs9ip3p7RfLJOECh96HRFi6nZ2" target="_blank" rel="noopener">PDFファイル</a></li>
+                    <li>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
+                  </ul>
+                </li>
               </ul>
             </dd>
           </dl>
