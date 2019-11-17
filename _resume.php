@@ -139,7 +139,7 @@
             <dd>
               <ul class="c-list">
                 <li class="c-list--disc">3DCGソフトを使用してのアニメーションを作成</li>
-                <li class="c-list--disc">学生時代のポートフォリオ・<a href="<?php echo get_template_directory_uri() ?>/files/portfolio_student.pdf" target="_blank">PDFファイル</a><br>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
+                <li class="c-list--disc">学生時代のポートフォリオ・<a href="https://drive.google.com/open?id=1uCJflFvs9ip3p7RfLJOECh96HRFi6nZ2" target="_blank" rel="noopener">PDFファイル</a><br>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
               </ul>
             </dd>
           </dl>
