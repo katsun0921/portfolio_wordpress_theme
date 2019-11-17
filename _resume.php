@@ -25,65 +25,56 @@
     </ul>
   </div>
   <div class="l-content__block">
-    <h3 class="c-heading__blockMain">Skills</h3>
+    <h3 class="c-heading__big">Skills</h3>
     <ul class="c-list c-list--disc">
       <li class="p-resume__skillLabel">HTML &amp; CSS : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          <div class="p-resume__skillBar" data-width="80"><span class="p-resume__skillBarYear">8年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">JavaScripts : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          <div class="p-resume__skillBar" data-width="80"><span class="p-resume__skillBarYear">8年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">SASS : 5年<span class="p-resume__skillLabelSub">Business</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          <div class="p-resume__skillBar" data-width="80"><span class="p-resume__skillBarYear">8年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">jQuery : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          <div class="p-resume__skillBar" data-width="80"><span class="p-resume__skillBarYear">8年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">Photoshop : 8年<span class="p-resume__skillLabelSub">Business &amp; Student</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">8年</span></div>
+          <div class="p-resume__skillBar" data-width="80"><span class="p-resume__skillBarYear">8年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">Illustrator : 4年<span class="p-resume__skillLabelSub">Student</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">4年</span></div>
+          <div class="p-resume__skillBar" data-width="40"><span class="p-resume__skillBarYear">4年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">Adobe XD : 3年<span class="p-resume__skillLabelSub">Private</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">3年</span></div>
+          <div class="p-resume__skillBar" data-width="30"><span class="p-resume__skillBarYear">3年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">After Effects : 4年<span class="p-resume__skillLabelSub">Student</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">4年</span></div>
+          <div class="p-resume__skillBar" data-width="40"><span class="p-resume__skillBarYear">4年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">3ds Max : 4年<span class="p-resume__skillLabelSub">Private</span>
         <div class="p-resume__skill">
-          <!-- あとでJS機能にする-->
-          <div class="p-resume__skillBar" style="width: 85%"><span class="p-resume__skillBarYear">4年</span></div>
+          <div class="p-resume__skillBar" data-width="40"><span class="p-resume__skillBarYear">4年</span></div>
         </div>
       </li>
       <li class="p-resume__skillLabel">git<span class="p-resume__skillLabelSub">コード管理</span></li>
       <li class="p-resume__skillLabel">Backlog<span class="p-resume__skillLabelSub">プロジェクト管理</span></li>
-      <li class="p-resume__skillLabel">Microsoft Office365(Microsoft Excel、Teams、SharePoint、Flow、OneNote)</li>
+      <li class="p-resume__skillLabel">Microsoft Office365(Microsoft Excel、Teams、Sharepoint、Flow、OneNote)</li>
     </ul>
   </div>
   <div class="l-content__block">
@@ -109,7 +100,7 @@
             <dd>
               <ul class="c-list">
                 <li class="c-list--disc">5名ほどでさまざまなプロジェクトの Web ページをチェック</li>
-                <li class="c-list--disc">テキストやリンクなどが現行どおりかのチェック</li>
+                <li class="c-list--disc">テキストやリンクなどが原稿どおりかのチェック</li>
                 <li class="c-list--disc">指定のブラウザでの表示の崩れがないか</li>
                 <li class="c-list--disc">JavaScriptが意図どおりに問題なく動作しているか</li>
                 <li class="c-list--disc">Web Content Accessibility Guidelines(WCAG)に準拠しているか</li>
@@ -148,7 +139,7 @@
             <dd>
               <ul class="c-list">
                 <li class="c-list--disc">3DCGソフトを使用してのアニメーションを作成</li>
-                <li class="c-list--disc">学生時代のポートフォリオ<br>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
+                <li class="c-list--disc">学生時代のポートフォリオ・<a href="<?php echo get_template_directory_uri() ?>/files/portfolio_student.pdf" target="_blank">PDFファイル</a><br>MP4のムービー<br>※mp4ファイルなのでブラウザによっては見れない恐れがあります。</li>
               </ul>
             </dd>
           </dl>
