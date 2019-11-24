@@ -21,7 +21,7 @@
           <?php the_content(); ?>
         </div>
         <div class="c-wrap--center u-mt--25">
-          <a href="/#blog" class="c-btn c-btn--block">BLOG一覧に戻る</a>
+          <a href="/#work" class="c-btn c-btn--block">WORK一覧に戻る</a>
         </div>
       </article>
       <div class="c-wrap--center">
