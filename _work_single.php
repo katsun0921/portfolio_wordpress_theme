@@ -1,30 +1,41 @@
 <?php get_template_part( '_top-open' , false) ?>
 <div class="l-content__blocks is-show" id="js-content">
 <?php get_template_part( '_nav-open' , false) ?>
-  <section class="l-container is-show" id="resume">
-      <div class="l-content__block">
-        <article id="blog-<?php the_ID(); ?>" class="p-blog__post">
-          <h1 class="p-blog__postTitle"><?php the_title() ?></h1>
-          <p class="p-blog__postInfo">
-          <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time><span><?php echo tag(); ?></span>
-          </p>
-          <div class="p-blog__postBody">
-            <?php the_content(); ?>
-          </div>
-          <a href="/#work" class="c-btn c-btn--block u-width--25">WORK一覧に戻る</a>
-        </article>
-        <div class="c-btn__social">
-          <dl class="c-btn__socialBtn">
-            <dt><span class="u-va--middle">Share this:</span></dt>
-            <dd>
-              <ul class="c-btn__socialBtnLists">
-                <li><a class="c-btn__socialBtnList" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon/icon_facebook.png" alt="facebook"></a></li>
-                <li><a class="c-btn__socialBtnList" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon/icon_twitter.png" alt="twitter"></a></li>
-              </ul>
-            </dd>
-          </dl>
+<section class="l-container is-show" id="resume">
+    <div class="l-content__block">
+      <article id="blog-<?php the_ID(); ?>" class="p-blog__post">
+        <h1 class="c-heading__middle"><?php the_title() ?>
+          <span class="c-heading__sub">
+          <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time><span>
+            <?php
+            $tags = get_the_tags();
+            if($tags) {
+              foreach ( $tags as $tag ) {
+              echo $tag->name;
+              }
+            }
+            ?></span>
+          </span>
+        </h1>
+        <div class="p-blog__postBody">
+          <?php the_content(); ?>
         </div>
+        <div class="c-wrap--center u-mt--25">
+          <a href="/#blog" class="c-btn c-btn--block">BLOG一覧に戻る</a>
+        </div>
+      </article>
+      <div class="c-wrap--center">
+        <dl class="c-wrap--rowCenter">
+          <dt><span class="u-va--middle">Share this:</span></dt>
+          <dd>
+            <ul class="c-wrap--rowCenter">
+              <li><a class="c-btn__socialBtnList" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon/icon_facebook.png" alt="facebook"></a></li>
+              <li><a class="c-btn__socialBtnList" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon/icon_twitter.png" alt="twitter"></a></li>
+            </ul>
+          </dd>
+        </dl>
       </div>
+    </div>
 
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
