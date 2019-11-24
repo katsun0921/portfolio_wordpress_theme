@@ -10,6 +10,15 @@
 $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $fullPath = parse_url($url);
 $path = explode('/', $fullPath['path'])[1]; // urlから第1階層のパス名を取得
+
+// 指定のディレクトリ以外はTOPへリダイレクト
+if($path) {
+  if($path !== 'blog' && $path !== 'work' && $path !== 'wp-login.php') {
+    wp_safe_redirect( home_url('/'), 301 );
+    exit;
+  }
+}
+
 function pagination( $pages, $paged, $category ) {
   global $path;
   if($path) {
