@@ -6,23 +6,6 @@
       開発者だけではなく、ページ検証のテスターとして、
       お客様への制作物のチェックという責任ある立場にもいたことがありました。
     </p>
-    <ul class="p-resume__infoList">
-      <li class="p-resume__infoListList"><span class="p-resume__infoListTerm">氏名</span>
-        <div>佐藤 功理</div>
-      </li>
-      <li class="p-resume__infoListList"><span class="p-resume__infoListTerm">生年月日</span>
-        <div>1985年9月21日</div>
-      </li>
-      <li class="p-resume__infoListList"><span class="p-resume__infoListTerm">Skype名</span>
-        <div> live:katsumasa-sato</div>
-      </li>
-      <li class="p-resume__infoListList"><span class="p-resume__infoListTerm">Twitter</span>
-        <div><a href="https://twitter.com/katsun0921">@katsun0921</a></div>
-      </li>
-      <li class="p-resume__infoListList"><span class="p-resume__infoListTerm">趣味</span>
-        <div>映画鑑賞、フィットネス、試飲会</div>
-      </li>
-    </ul>
   </div>
   <div class="l-content__block">
     <h3 class="c-heading__big">Skills</h3>
