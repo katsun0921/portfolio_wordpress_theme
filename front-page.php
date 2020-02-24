@@ -4,7 +4,7 @@
   <section class="js-topName p-top__name">
     <!-- クリック時に.is-reverseを付与-->
     <div class="js-topName p-top__nameContainer">
-      <h1 class="p-top__headingMain">Katsumasa<br>Sato<span class="p-top__headingMain--sub">WEB DEVELOPER</span></h1>
+      <h1 class="p-top__headingMain">Katsumasa<br>Sato<span class="p-top__headingMain--sub">現在ページリニューアル中です。</span></h1>
       <a class="p-top__nameSkillLink" href="https://docs.google.com/spreadsheets/d/1pWnjGrUb1viZDfJ0AbazUe1gE14RgJuNk8UmCin2Xk4/edit?usp=sharing" target="_blank" rel="noopener">SKILL SHEET</a>
     </div>
   </section>
