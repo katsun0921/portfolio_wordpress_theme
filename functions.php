@@ -13,7 +13,7 @@ $path = explode('/', $fullPath['path'])[1]; // urlから第1階層のパス名�
 
 // 指定のディレクトリ以外はTOPへリダイレクト
 if($path) {
-    $arrayPath = array('blog','work','wp-login.php','wp-admin','wp-json');
+    //$arrayPath = array('blog','work','wp-login.php','wp-admin','wp-json', 'graphql');
   if(in_array($path,$arrayPath) === false) {
     wp_safe_redirect( home_url('/'), 301 );
     exit;
